@@ -4,14 +4,15 @@
 //
 //  Created by McKenzie, Cameron - Student on 11/30/25.
 //
-
 import SwiftUI
-
 @main
-struct Hangout_Finder_AppApp: App {
+struct HangoutApp: App {
+    @StateObject var favoritesManager = FavoritesManager()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(favoritesManager)
         }
     }
 }
